@@ -4,20 +4,20 @@
 function creerProduit(string $libelle, string $stock, string $prix, array $produits, array &$errors): array {
     required($libelle, $errors, "Le libellé est obligatoire");
     libelleUnique($libelle, $produits, $errors, "Ce produit existe déjà");
-
+    
     $stockInt = (int)$stock;
     $prixInt = (int)$prix;
-
+    
     if ($stockInt <= 0) {
         $errors['stock'] = "La quantité doit être positive";
     }
     if ($prixInt <= 0) {
         $errors['prix'] = "Le prix doit être positif";
     }
-
+    
     $ref = generesReference($produits);
     $montant = $stockInt * $prixInt;
-
+    
     return [
         "libelle" => $libelle,
         "refPro" => $ref,
