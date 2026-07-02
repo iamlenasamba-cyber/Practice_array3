@@ -1,5 +1,5 @@
 <?php
-// utils/utils.php
+// utiles/utils.php
 
 function saisie(string $message): string {
     return readline($message);
@@ -12,11 +12,11 @@ function listen(array $array): void {
 function concatenation(int $taille): string {
     if ($taille <= 9) {
         return "REF00" . $taille;
-    }
-    if ($taille <= 99) {
+    } elseif ($taille <= 99) {
         return "REF0" . $taille;
+    } else {
+        return "REF" . $taille;
     }
-    return "REF" . $taille;
 }
 
 function generesReference(array $produits): string {

@@ -1,5 +1,5 @@
 <?php
-// controller/app.php
+
 function runApp(): void {
     $produits = getInitialProduits();
     $archive = [];

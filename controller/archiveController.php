@@ -39,7 +39,7 @@ function afficherArchiveController(array $archive): void {
         return;
     }
 
-    echo "\n Archive des produits \n";
+    echo "\n--- Archive des produits ---\n";
     foreach ($archive as $produit) {
         echo '- ' . $produit['libelle'] . ' (' . $produit['refPro'] . ') : ' . $produit['montant'] . "\n";
     }

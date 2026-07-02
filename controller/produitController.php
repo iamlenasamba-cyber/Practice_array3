@@ -1,4 +1,5 @@
 <?php
+// controller/produitController.php
 
 function gererCreationProduit(array $produits): array {
     while (true) {
